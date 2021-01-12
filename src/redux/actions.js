@@ -5,6 +5,7 @@ import {
   ADD_ITEM_TO_ORDER,
   REMOVE_ITEM_FROM_ORDER,
   SELECT_USER_ID,
+  RESET_STATE,
 } from "./actionTypes";
 
 export const addUser = (content) => ({
@@ -45,4 +46,8 @@ export const removeItemFromOrder = (content) => ({
   payload: {
     content,
   },
+});
+
+export const resetState = () => ({
+  type: RESET_STATE,
 });

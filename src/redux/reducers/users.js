@@ -1,9 +1,9 @@
-import { ADD_USER, SELECT_USER_ID } from "../actionTypes";
+import { ADD_USER, SELECT_USER_ID, RESET_STATE } from "../actionTypes";
 
 const user1 = {
   id: 1,
-  firstName: "Jason",
-  lastName: "Rogers",
+  firstName: "Sandwich",
+  lastName: "Admin",
   isAdmin: true,
 };
 
@@ -42,7 +42,10 @@ export default function userReducer(state = initialState, action) {
         ...state,
         selectedUserId: action.payload.userId,
       };
-
+    case RESET_STATE:
+      return {
+        ...initialState,
+      };
     default:
       return state;
   }

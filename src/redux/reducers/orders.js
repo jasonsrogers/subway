@@ -1,4 +1,4 @@
-import { OPEN_NEW_ORDER, CLOSE_ORDER, ADD_ITEM_TO_ORDER } from "../actionTypes";
+import { OPEN_NEW_ORDER, CLOSE_ORDER, ADD_ITEM_TO_ORDER, RESET_STATE } from "../actionTypes";
 
 const initialState = {
   previousOrders: [],
@@ -42,6 +42,11 @@ export default function orderReducer(state = initialState, action) {
         },
       };
     }
+
+    case RESET_STATE:
+      return {
+        ...initialState,
+      };
     default:
       return state;
   }
