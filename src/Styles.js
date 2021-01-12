@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
 const btn = (light, dark) => css`
   white-space: nowrap;
@@ -25,13 +25,13 @@ const btn = (light, dark) => css`
     opacity: 0.6;
     cursor: not-allowed;
   }
-`
+`;
 
 const btnDefault = css`
-  ${btn('#ffffff', '#d5d5d5')} color: #555;
-`
+  ${btn("#ffffff", "#d5d5d5")} color: #555;
+`;
 
-const btnPrimary = btn('#4f93ce', '#285f8f')
+const btnPrimary = btn("#4f93ce", "#285f8f");
 
 export default styled.div`
   font-family: sans-serif;
@@ -53,10 +53,10 @@ export default styled.div`
 
   form {
     max-width: 500px;
-    margin: 10px auto;
+    margin: 10px 0;
     border: 1px solid #ccc;
     padding: 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
     border-radius: 3px;
 
     & > div {
@@ -80,7 +80,7 @@ export default styled.div`
         border: 1px solid #ccc;
         border-radius: 3px;
       }
-      & > input[type='checkbox'] {
+      & > input[type="checkbox"] {
         margin-top: 7px;
       }
       & > div {
@@ -93,21 +93,7 @@ export default styled.div`
         }
       }
     }
-    & > .buttons {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      margin-top: 15px;
-    }
-    button {
-      margin: 0 10px;
-      &[type='submit'] {
-        ${btnPrimary};
-      }
-      &[type='button'] {
-        ${btnDefault};
-      }
-    }
+
     pre {
       border: 1px solid #ccc;
       background: rgba(0, 0, 0, 0.1);
@@ -115,4 +101,4 @@ export default styled.div`
       padding: 20px;
     }
   }
-`
+`;

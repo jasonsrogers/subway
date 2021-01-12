@@ -7,13 +7,10 @@ import {
   SELECT_USER_ID,
 } from "./actionTypes";
 
-let nextUserId = 2;
-let nextOrderId = 0;
-
 export const addUser = (content) => ({
   type: ADD_USER,
   payload: {
-    id: ++nextUserId,
+    id: new Date().getTime(),
     content,
   },
 });
@@ -24,12 +21,14 @@ export const selectUserId = (userId) => ({
   },
 });
 
-export const openNewOrder = () => ({
-  type: OPEN_NEW_ORDER,
-  payload: {
-    id: ++nextOrderId,
-  },
-});
+export const openNewOrder = () => {
+  return {
+    type: OPEN_NEW_ORDER,
+    payload: {
+      id: new Date().getTime(),
+    },
+  };
+};
 export const closeOrder = () => ({
   type: CLOSE_ORDER,
   payload: {},
@@ -38,7 +37,7 @@ export const closeOrder = () => ({
 export const addItemToOrder = (content) => ({
   type: ADD_ITEM_TO_ORDER,
   payload: {
-    content,
+    content: { ...content, id: new Date().getTime() },
   },
 });
 export const removeItemFromOrder = (content) => ({
