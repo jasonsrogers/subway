@@ -4,9 +4,10 @@ import {
   CLOSE_ORDER,
   ADD_ITEM_TO_ORDER,
   REMOVE_ITEM_FROM_ORDER,
+  SELECT_USER_ID,
 } from "./actionTypes";
 
-let nextUserId = 0;
+let nextUserId = 2;
 let nextOrderId = 0;
 
 export const addUser = (content) => ({
@@ -14,6 +15,12 @@ export const addUser = (content) => ({
   payload: {
     id: ++nextUserId,
     content,
+  },
+});
+export const selectUserId = (userId) => ({
+  type: SELECT_USER_ID,
+  payload: {
+    userId,
   },
 });
 

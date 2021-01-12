@@ -33,7 +33,12 @@ export default function orderReducer(state = initialState, action) {
         ...state,
         currentOrder: {
           ...state.currentOrder,
-          items: [...state.currentOrder.items, content],
+          items: {
+            ...state.currentOrder.items,
+            [content.userId]: {
+              ...content,
+            },
+          },
         },
       };
     }

@@ -1,4 +1,5 @@
 export const ADD_USER = "ADD_USER";
+export const SELECT_USER_ID = "SELECT_USER_ID";
 
 export const OPEN_NEW_ORDER = "OPEN_NEW_ORDER";
 export const CLOSE_ORDER = "CLOSE_ORDER";
