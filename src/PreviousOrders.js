@@ -10,6 +10,10 @@ const OrderTileContainer = styled.div`
   flex-wrap: wrap;
 `;
 
+/**
+ * Show list of previous orders of a user
+ * @param {*} param0
+ */
 function PreviousOrders({ orders = [], canOrder }) {
   if (orders.length === 0) {
     return (

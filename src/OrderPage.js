@@ -9,6 +9,12 @@ import { selectUserId } from "./redux/actions";
 import OrderForm from "./OrderForm";
 import PreviousOrders from "./PreviousOrders";
 
+/**
+ * Display the order page
+ * - Order form
+ * - Previous order of user
+ * @param {*} param0
+ */
 function OrderPage({ userId }) {
   const user = useSelector((state) => getUserById(state, userId));
   const previousOrders = useSelector((state) =>

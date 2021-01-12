@@ -10,6 +10,10 @@ const H3 = styled.h3`
   margin-top: 10px;
 `;
 
+/**
+ * Add User form
+ * Fill in basic information and push new user to Redux
+ */
 function AddUserForm() {
   const dispatch = useDispatch();
   const onSubmit = async (values) => {

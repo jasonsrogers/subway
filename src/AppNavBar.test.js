@@ -10,7 +10,7 @@ test("Renders AppNavbar", async () => {
       <AppNavbar />
     </Provider>
   );
-  expect(await screen.getByText("Subway")).toBeTruthy();
-  expect(await screen.getByText("Home")).toBeTruthy();
-  expect(await screen.getByText("Order")).toBeTruthy();
+  expect(screen.getByText("Subway")).toBeTruthy();
+  expect(screen.getByText("Home")).toBeTruthy();
+  expect(screen.getByText("Order")).toBeTruthy();
 });

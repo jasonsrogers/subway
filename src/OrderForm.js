@@ -17,6 +17,10 @@ import {
 } from "./constants";
 import Styles from "./Styles";
 
+/**
+ * Form to place sandwich order
+ * @param {*} userId
+ */
 function OrderForm({ userId }) {
   const [editCurrentOrder, setEditCurrentOrder] = useState(false);
   const dispatch = useDispatch();

@@ -17,6 +17,10 @@ import {
 const OrderTileWrapper = styled.div`
   margin-right: 10px;
 `;
+/**
+ * Show sandwich details breakdown
+ * @param {*} param0
+ */
 function OrderTile({ order, canOrderAgain = false }) {
   const dispatch = useDispatch();
   const orderAgain = () => {

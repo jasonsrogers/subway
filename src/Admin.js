@@ -15,6 +15,12 @@ const H3Red = styled.h3`
   color: red;
 `;
 
+/**
+ * Display admin functionalities:
+ * Open/Close orders
+ * Add users
+ * Reset state
+ */
 function Admin() {
   const { canOrder } = useSelector(getOrdersState);
 

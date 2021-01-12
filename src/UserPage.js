@@ -10,6 +10,13 @@ import OrderDetails from "./OrderDetails";
 import Admin from "./Admin";
 import PreviousOrders from "./PreviousOrders";
 
+/**
+ * User Page
+ * Shows the Users current order
+ * Shows Users previous orders
+ * if admin, show admin functionalities
+ * @param {*} param0
+ */
 function UserPage({ userId }) {
   const user = useSelector((state) => getUserById(state, userId));
   const dispatch = useDispatch();

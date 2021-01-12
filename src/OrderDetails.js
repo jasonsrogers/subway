@@ -5,6 +5,10 @@ const OrderTileContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
+/**
+ * Display the details of an order by showing list of order items
+ * @param {*} param0
+ */
 function OrderDetails({ order }) {
   const orders = order?.items ? Object.entries(order.items) : [];
 

@@ -18,6 +18,11 @@ const Content = styled.div`
   margin: 20px auto;
 `;
 
+/**
+ * Root of app includes:
+ * redux setup
+ * Reach router set up and routes
+ */
 function App() {
   return (
     <Provider store={store}>

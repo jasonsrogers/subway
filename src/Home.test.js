@@ -10,7 +10,7 @@ test("Renders Home", async () => {
       <Home />
     </Provider>
   );
-  expect(await screen.getByText("Home")).toBeTruthy();
-  expect(await screen.getByText("Previous Order:")).toBeTruthy();
-  expect(await screen.getByText("No current order")).toBeTruthy();
+  expect(screen.getByText("Home")).toBeTruthy();
+  expect(screen.getByText("Previous Order:")).toBeTruthy();
+  expect(screen.getByText("No current order")).toBeTruthy();
 });

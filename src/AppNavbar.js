@@ -6,6 +6,11 @@ import { getUserList, getSelectedUserId } from "./redux/selectors";
 import { selectUserId } from "./redux/actions";
 import { navigate } from "@reach/router";
 
+/**
+ *
+ * @param {User} {users}  list of users
+ * on selection, navigate to user page
+ */
 function UserList({ users = [] }) {
   const dispatch = useDispatch();
   const onClick = (userId) => {
@@ -24,7 +29,10 @@ function UserList({ users = [] }) {
     </nav>
   );
 }
-
+/**
+ * Navbar of the application
+ * Contains navigation links including user switch (only for demo purpose)
+ */
 function AppNavbar() {
   const userId = useSelector((state) => getSelectedUserId(state));
   const users = useSelector(getUserList);

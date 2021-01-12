@@ -11,6 +11,10 @@ function PreviousOrder({ order }) {
     </>
   );
 }
+/**
+ * Accordion card with previous orders
+ * @param {*} param0
+ */
 function PreviousOrderCard({ order }) {
   return (
     <Card>
@@ -27,7 +31,10 @@ function PreviousOrderCard({ order }) {
     </Card>
   );
 }
-
+/**
+ * Accordion of previous order
+ * @param {*} param0
+ */
 function PreviousOrderAccordion({ orders }) {
   return (
     <Accordion>
@@ -38,6 +45,10 @@ function PreviousOrderAccordion({ orders }) {
   );
 }
 
+/**
+ * Home page
+ * will display previous order placed on the site and basic information
+ */
 function Home() {
   const { previousOrders } = useSelector(getOrdersState);
   return (
