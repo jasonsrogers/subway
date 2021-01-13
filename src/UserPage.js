@@ -35,7 +35,7 @@ function UserPage({ userId }) {
 
   return (
     <>
-      <h3>Your current order:</h3>
+      <h3>Current order:</h3>
       {currentOrder ? (
         <OrderDetails order={currentOrder} />
       ) : (

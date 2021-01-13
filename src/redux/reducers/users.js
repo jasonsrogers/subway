@@ -20,6 +20,7 @@ const initialState = {
     1: user1,
     2: user2,
   },
+  selectedUserId: user1.id,
 };
 
 export default function userReducer(state = initialState, action) {

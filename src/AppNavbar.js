@@ -1,41 +1,16 @@
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Nav from "react-bootstrap/Nav";
-import { useSelector, useDispatch } from "react-redux";
-import { getUserList, getSelectedUserId } from "./redux/selectors";
-import { selectUserId } from "./redux/actions";
-import { navigate } from "@reach/router";
 
-/**
- *
- * @param {User} {users}  list of users
- * on selection, navigate to user page
- */
-function UserList({ users = [] }) {
-  const dispatch = useDispatch();
-  const onClick = (userId) => {
-    dispatch(selectUserId(userId));
-    navigate(`/user/${userId}`);
-  };
-  return (
-    <nav>
-      {users.map((user) => (
-        <div key={user.id}>
-          <NavDropdown.Item key={user.id} onClick={() => onClick(user.id)}>
-            {user.firstName} {user.lastName}
-          </NavDropdown.Item>
-        </div>
-      ))}
-    </nav>
-  );
-}
+import Nav from "react-bootstrap/Nav";
+import { useSelector } from "react-redux";
+import { getSelectedUserId } from "./redux/selectors";
+
 /**
  * Navbar of the application
  * Contains navigation links including user switch (only for demo purpose)
  */
 function AppNavbar() {
   const userId = useSelector((state) => getSelectedUserId(state));
-  const users = useSelector(getUserList);
+
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand href="#home">Subway</Navbar.Brand>
@@ -44,9 +19,7 @@ function AppNavbar() {
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href={`/order/${userId}`}>Order</Nav.Link>
-          <NavDropdown title="Users" id="basic-nav-dropdown">
-            <UserList users={users} />
-          </NavDropdown>
+          <Nav.Link href={`/user/${userId}`}>User</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

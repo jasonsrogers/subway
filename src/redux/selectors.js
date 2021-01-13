@@ -1,5 +1,3 @@
-import { isDebuggerStatement } from "typescript";
-
 export const getUsersState = (store) => store.users;
 
 export const getUserList = (store) =>
@@ -10,6 +8,11 @@ export const getUserById = (store, id) =>
 
 export const getSelectedUserId = (store) =>
   getUsersState(store) ? getUsersState(store).selectedUserId : {};
+
+export const getSelectedUser = (store) => {
+  const selectedUserId = getSelectedUserId(store);
+  return getUsersState(store) ? getUserById(store, selectedUserId) : {};
+};
 
 export const getOrdersState = (store) => store.orders;
 
