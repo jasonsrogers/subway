@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { addItemToOrder } from "./redux/actions";
+import { addItemToOrder } from "../redux/actions";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 

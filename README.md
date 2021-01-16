@@ -27,3 +27,11 @@ There is no back end, therefore to maintain the state of the application, we are
 
 There are 2 users pre configured (Sandwich Admin and Frodo Baggins)
 As we do not have a proper login in admin, we can switch users from the navbar before navigating to Order page
+
+# Road map
+
+- review UX
+  - add mock login page
+  - add order confirmation modal/toast
+  - move open/close order
+  - create purchase order flow (maybe not one block form)?

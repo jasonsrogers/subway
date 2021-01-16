@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { openNewOrder, closeOrder, resetState } from "./redux/actions";
-import { getOrdersState } from "./redux/selectors";
+import { openNewOrder, closeOrder, resetState } from "../redux/actions";
+import { getOrdersState } from "../redux/selectors";
 import AddUserForm from "./AddUserForm";
 import Button from "react-bootstrap/Button";
 import styled from "styled-components";

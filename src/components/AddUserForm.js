@@ -2,9 +2,9 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Form, Field } from "react-final-form";
 import Button from "react-bootstrap/Button";
-import { addUser } from "./redux/actions";
+import { addUser } from "../redux/actions";
 
-import Styles from "./Styles";
+import Styles from "../styles/Styles";
 import styled from "styled-components";
 const H3 = styled.h3`
   margin-top: 10px;
@@ -16,7 +16,7 @@ const H3 = styled.h3`
  */
 function AddUserForm() {
   const dispatch = useDispatch();
-  const onSubmit = async (values) => {
+  const onSubmit = (values) => {
     dispatch(addUser(values));
   };
   return (

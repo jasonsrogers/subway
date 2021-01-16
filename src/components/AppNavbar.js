@@ -2,7 +2,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 import Nav from "react-bootstrap/Nav";
 import { useSelector } from "react-redux";
-import { getSelectedUserId } from "./redux/selectors";
+import { getSelectedUserId } from "../redux/selectors";
 
 /**
  * Navbar of the application

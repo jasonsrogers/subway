@@ -4,10 +4,10 @@ import {
   getUserById,
   getUsersPreviousOrders,
   getOrdersState,
-} from "./redux/selectors";
-import { selectUserId } from "./redux/actions";
-import OrderForm from "./OrderForm";
-import PreviousOrders from "./PreviousOrders";
+} from "../redux/selectors";
+import { selectUserId } from "../redux/actions";
+import OrderForm from "../components/OrderForm";
+import PreviousOrders from "../components/PreviousOrders";
 
 /**
  * Display the order page

@@ -3,9 +3,9 @@ import {
   getOrdersState,
   getUserList,
   getSelectedUser,
-} from "./redux/selectors";
-import { selectUserId } from "./redux/actions";
-import OrderDetails from "./OrderDetails";
+} from "../redux/selectors";
+import { selectUserId } from "../redux/actions";
+import OrderDetails from "../components/OrderDetails";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";

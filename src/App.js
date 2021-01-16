@@ -5,11 +5,10 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import { Router } from "@reach/router";
 
-import AppNavbar from "./AppNavbar";
-import UserPage from "./UserPage";
-import OrderPage from "./OrderPage";
-import Home from "./Home";
-import "./App.css";
+import AppNavbar from "./components/AppNavbar";
+import UserPage from "./pages/UserPage";
+import OrderPage from "./pages/OrderPage";
+import Home from "./pages/HomePage";
 
 import styled from "styled-components";
 

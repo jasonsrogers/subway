@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Form, Field } from "react-final-form";
 
 import { useDispatch, useSelector } from "react-redux";
-import { getOrdersState } from "./redux/selectors";
-import { getUserById } from "./redux/selectors";
-import { addItemToOrder } from "./redux/actions";
+import { getOrdersState } from "../redux/selectors";
+import { getUserById } from "../redux/selectors";
+import { addItemToOrder } from "../redux/actions";
 import Button from "react-bootstrap/Button";
 import OrderTile from "./OrderTile";
 // These would normally be calls to db that are loaded into redux and accessed via selectors
@@ -15,7 +15,7 @@ import {
   getSauce,
   getVegetables,
 } from "./constants";
-import Styles from "./Styles";
+import Styles from "../styles/Styles";
 
 /**
  * Form to place sandwich order
@@ -27,7 +27,7 @@ function OrderForm({ userId }) {
   const user = useSelector((state) => getUserById(state, userId));
   const { currentOrder, canOrder } = useSelector(getOrdersState);
 
-  const onSubmit = async (values) => {
+  const onSubmit = (values) => {
     dispatch(
       addItemToOrder({
         ...values,
